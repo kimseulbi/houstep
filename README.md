@@ -7,6 +7,14 @@ npm install
 npm start
 ```
 
+## 사용 기술
+
+- HTML, CSS(SCSS)
+- axios
+- React
+  - create-react-app, react router, classnames
+  - Redux
+
 ## 개요
 
 API를 활용하여 실시간으로 정보를 받아 와서 React + Redux를 활용하여 날씨(현재 위치, 온도, 미세먼지 농도)를 알아보는 예제(아래 실행 예제 참고)를 만들어 봅니다. 실행 예제에 해당하는 기능 정도만 만들어 오셔도 되고 추가적인 기능을 구상해서 붙여도 됩니다. 기능의 풍부함으로만 역량을 판단하지 않으니 적절한 수준에서 제출하셔도 됩니다.
