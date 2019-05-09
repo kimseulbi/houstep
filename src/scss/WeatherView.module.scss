@@ -1,0 +1,44 @@
+@import './common.scss';
+
+.weather {
+    padding: 5rem 0 10rem;
+    text-align: center;
+
+    &__city {
+        font-size: 7rem;
+    }
+
+    &__temp,
+    &__weather {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+    }
+
+    &__weather {
+        font-size: 3.5rem;
+    }
+
+    img {
+        margin: 3.5rem 0;
+        animation: infiniteMove 3s infinite cubic-bezier(0.21, 0.21, 0.21, 0.21);
+    }
+
+    @keyframes infiniteMove {
+        0% {
+            transform: translateX(0px);
+        }
+
+        25% {
+            transform: translateX(-10%);
+        }
+
+        50% {
+            transform: translateX(10%);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+}

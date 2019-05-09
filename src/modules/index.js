@@ -1,8 +1,8 @@
 import sun from "../scss/images/icon-sun.png";
 import rain from "../scss/images/icon-rain.png";
-import mist from "../scss/images/icon-mist";
-import cloud from "../scss/images/icon-cloud";
-import snow from "../scss/images/icon-snow";
+import mist from "../scss/images/icon-mist.png";
+import cloud from "../scss/images/icon-cloud.png";
+import snow from "../scss/images/icon-snow.png";
 
 // 날짜
 export const getDate = () => {
@@ -87,4 +87,15 @@ export const getWeather = weather => {
 };
 
 //켈빈을 섭씨로 변환
-export const getTemp = temp => `${temp - 273.15} °C`;
+export const getTemp = temp => `${(temp - 273.15).toFixed(2)}°C`;
+
+// 지역 한글로 변경
+export const getCity = city => {
+  let changCity;
+  switch (city) {
+    case "Seoul":
+      changCity = "서울";
+      break;
+  }
+  return changCity;
+};

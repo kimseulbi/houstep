@@ -48,7 +48,7 @@ export default function weather(state = initialState, action) {
         weather: action.load["weather"][0].main,
         city: action.load.name,
         temp: action.load["main"].temp,
-        icon: ""
+        icon: action.load["weather"][0].main
       };
     case FETCH_WEATHER_FAIL:
       return {
