@@ -64,6 +64,59 @@ a {
     box-sizing: border-box;
 }
 
+/* HTML5 display-role reset for older browsers */
+/* 익스플로러 하위버전은 해당 태그를 인식하지 못한다. 인식하지 못하는 태그는 inline 요소로 들어가기때문에 width, height등의 속성 설정이 안된다. */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main {
+    display: block;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/******** CSS 모듈 ********/
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/******** 숨김 콘텐츠 ********/
+.readable-hidden,
+.skip-nav,
+legend {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin: -1px;
+    clip: rect(0, 0, 0, 0);
+}
+
+.skip-nav:focus {
+    width: 100%;
+    height: auto;
+    padding: 1em;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    clip: rect(auto, auto, auto, auto);
+    z-index: 100;
+}
+
 body {
     color: $basic-color;
     background-color: $background-color;
@@ -76,4 +129,19 @@ main,
 footer {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+}
+
+footer {
+    text-align: center;
+    padding: 3rem 0;
+
+    .logo {
+        background: $logo-image;
+        background-position: center;
+        background-size: contain;
+        width: 100px;
+        height: 20px;
+        margin: 0 auto;
+    }
 }

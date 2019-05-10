@@ -6,7 +6,9 @@ export default class Layout extends Component {
       <React.Fragment>
         <main>{this.props.children}</main>
         <footer>
-          <p>로고</p>
+          <h1 className="logo">
+            <span className="readable-hidden">로고</span>
+          </h1>
         </footer>
       </React.Fragment>
     );
