@@ -1,22 +1,12 @@
 import { createStore, applyMiddleware, compose } from "redux";
 import rootReducer from "./store/ducks";
-import { createLogger } from "redux-logger";
 import thunk from "redux-thunk";
 
-const configureStore = () => {
-  const middlewares = [thunk];
-  if (process.env.NODE_ENV !== "production") {
-    middlewares.push(createLogger());
-  }
-
-  return createStore(
-    rootReducer,
-    compose(
-      applyMiddleware(...middlewares),
-      window.__REDUX_DEVTOOLS_EXTENSION__ &&
-        window.__REDUX_DEVTOOLS_EXTENSION__()
-    )
-  );
-};
-
-export default configureStore;
+export const configureStore = createStore(
+  rootReducer,
+  compose(
+    applyMiddleware(thunk),
+    //노드에서 단위 테스트 또는 구성 요소를 실행 중인지 확인하기 위해 윈도우 검사를 수행x
+    window.devToolsExtension ? window.devToolsExtension() : f => f
+  )
+);
