@@ -5,11 +5,10 @@ import cloud from "../scss/images/icon-cloud.png";
 import snow from "../scss/images/icon-snow.png";
 
 // 날짜
-export const getDate = () => {
-  const today = new Date();
-  let ww = today.getDay(); // 요일
-  let dd = today.getDate(); // 날짜
-  let mm = today.getMonth() + 1; //달
+export const getDate = date => {
+  let ww = date.getDay(); // 요일
+  let dd = date.getDate(); // 날짜
+  let mm = date.getMonth() + 1; //달
   switch (ww) {
     case 0:
       ww = "일요일";
@@ -47,10 +46,13 @@ export const getIcon = weather => {
     case "Clear":
       icon = sun;
       break;
-    case "Rain" || "Drizzle":
+    case "Rain":
       icon = rain;
       break;
-    case "Haze" || "Mist":
+    case "Haze":
+      icon = mist;
+      break;
+    case "Mist":
       icon = mist;
       break;
     case "Clouds":
@@ -70,10 +72,16 @@ export const getWeather = weather => {
     case "Clear":
       changWeather = "맑음";
       break;
-    case "Rain" || "Drizzle":
+    case "Drizzle":
       changWeather = "비";
       break;
-    case "Haze" || "Mist":
+    case "Rain":
+      changWeather = "비";
+      break;
+    case "Haze":
+      changWeather = "안개";
+      break;
+    case "Mist":
       changWeather = "안개";
       break;
     case "Clouds":
