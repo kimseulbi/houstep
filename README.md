@@ -12,8 +12,9 @@ npm start
 - HTML, CSS(SCSS)
 - axios
 - React
-  - create-react-app, react router, classnames
-  - Redux
+  - create-react-app, react router, classnames, react helmet
+  - Redux, Redux-thunk
+- netlify
 
 ## 개요
 
