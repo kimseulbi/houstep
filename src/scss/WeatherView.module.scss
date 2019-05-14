@@ -20,23 +20,50 @@
 
     img {
         margin: 3.5rem 0;
+        -webkit-animation: infiniteMove 3s infinite cubic-bezier(0.21, 0.21, 0.21, 0.21);
         animation: infiniteMove 3s infinite cubic-bezier(0.21, 0.21, 0.21, 0.21);
     }
 
-    @keyframes infiniteMove {
+    @-webkit-keyframes infiniteMove {
         0% {
+            -webkit-transform: translateX(0px);
             transform: translateX(0px);
         }
 
         25% {
+            -webkit-transform: translateX(-10%);
             transform: translateX(-10%);
         }
 
         50% {
+            -webkit-transform: translateX(10%);
             transform: translateX(10%);
         }
 
         100% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes infiniteMove {
+        0% {
+            -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+        }
+
+        25% {
+            -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+        }
+
+        50% {
+            -webkit-transform: translateX(10%);
+            transform: translateX(10%);
+        }
+
+        100% {
+            -webkit-transform: translateX(0);
             transform: translateX(0);
         }
     }
