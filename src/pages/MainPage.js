@@ -9,7 +9,7 @@ class MainPage extends Component {
       <>
         <Helmet>
           <meta charSet="utf-8" />
-          <title>No.1 온라인 시공판매, 하우스텝</title>
+          <title>날씨</title>
         </Helmet>
         <Layout>
           <Weather />
